@@ -1,0 +1,6 @@
+POST http://localhost:5000/api/url/shorten
+ Content-Type: application/json
+
+ {
+     "longUrl" : "https://www.amazon.in/ANNI-DESIGNER-Khadi-Blouse-Piece/dp/B083QJ52YH?pf_rd_r=81HTFJJ26R74R0AQSHCT&pf_rd_p=e60c70f0-0541-4ba5-b6fc-ada95198a5fe&pd_rd_r=d243233b-2a4e-4ede-9dbf-d323f5d6f0d9&pd_rd_w=ifOZ4&pd_rd_wg=3efHF&ref_=pd_gw_crs_zg_bs_1571271031"
+ }
