@@ -8,8 +8,12 @@ const Url = require('../models/Url');
 
 //@route   POST /api/url/shorten
 //@desc    creates short url
+let longUrl;
 router.post('/shorten', async (req, res) => {
-    const { longUrl } = req.body;
+
+    const { fullurl } = req.body;
+    longUrl= fullurl;
+    //console.log(longUrl);
     const baseUrl = config.get('baseURL');
 
     //Check base url
@@ -23,9 +27,7 @@ router.post('/shorten', async (req, res) => {
     if (validurl.isUri(longUrl)) {
         try {
             let url = await Url.findOne({ longUrl });
-            if (url) {
-                res.json(url);
-            } else {
+            if (!url) {
                 const shortUrl = baseUrl + '/' + urlCode;
                 url = new Url({
                     longUrl,
@@ -35,8 +37,9 @@ router.post('/shorten', async (req, res) => {
                 });
                 await url.save();
 
-                res.json(url);
+                
             }
+            res.redirect('/');
 
 
         } catch (err) {
@@ -44,9 +47,16 @@ router.post('/shorten', async (req, res) => {
         }
 
     } else {
+        //console.log(longUrl);
         res.status(401).json('Invalid long url');
     }
 
+});
+
+router.get('/',async (req,res) =>{
+    let short = await Url.findOne({longUrl});
+    console.log(short);
+    res.render('index.ejs',{short:short.shortUrl});
 });
 
 

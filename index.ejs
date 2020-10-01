@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div  class="container">
+        
+   
+    <h2>URL Shortener</h2>
+    <form action="/shorten" method="POST" class="my-4 form-inline">
+        <label id="heading">
+            Enter Long URL:
+        </label>
+    
+            <input type="url" name="fullurl" class="form-control mr-2 col" required >
+        <br>
+            <button class="btn btn-success mr-2" type="submit">Shorten</button>
+    
+        <br>
+        <label >
+            Short URL:
+        </label>
+        <textarea class="form-control mr-2 col" ><%=short%></textarea>
+
+    </form>
+  </div>
+</body>
+
+</html>

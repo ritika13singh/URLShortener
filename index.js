@@ -1,12 +1,19 @@
 const express = require("express");
 const connectDB = require('./config/db');
+//const router = require('./routes/router');
 const app = express();
 
 //connect to mongoDB
 connectDB();
 
-app.use(express.json({extended: false}));
 
+
+app.set('view engine','ejs');
+app.use('/',express.static('index'));
+app.use(express.json({extended: false}));
+app.use(express.urlencoded({
+    extended:true
+}));
 //defining routes
 app.use('/',require('./routes/index'));
 app.use('/api/url/',require('./routes/url'));

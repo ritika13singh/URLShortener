@@ -1,0 +1,48 @@
+
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 40%;  
+    margin-top: 2cm;
+    font-size: xx-large;
+    font-style: bold;
+    position: absolute;
+}
+#heading{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 12cm;
+    margin-top: 6cm;
+    font-size: x-large;
+    font-style: bold;
+    width: fit-content;
+    position: absolute;
+
+   
+}
+#heading2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 12cm;
+    margin-top: 10cm;
+    font-size: x-large;
+    font-style: bold;
+    width: fit-content;
+    position: absolute;
+}
+.ip{
+    margin-left: 19cm;
+    margin-top: 6cm;
+    position: absolute;
+    width: 15cm;
+    
+}
+#op{
+    margin-left: 19cm;
+    margin-top: 10cm;
+}
+button{
+    margin-top: 7cm;
+    text-align: center;
+    height: fit-content;
+    margin-left: 17cm;
+    position: absolute;
+
+}
