@@ -17,7 +17,6 @@ router.get('/:code',async(req,res)=>{
         console.error(err);
         res.status(500).json('Server error');
     }
-    res.render('../index',{url:url.urlCode});
 });
 
 

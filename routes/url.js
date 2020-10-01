@@ -39,8 +39,7 @@ router.post('/shorten', async (req, res) => {
 
                 
             }
-            res.redirect('/');
-
+            res.render('index',{short:url.shortUrl});
 
         } catch (err) {
             console.error(500).json('Server Error');
@@ -53,11 +52,7 @@ router.post('/shorten', async (req, res) => {
 
 });
 
-router.get('/',async (req,res) =>{
-    let short = await Url.findOne({longUrl});
-    console.log(short);
-    res.render('index.ejs',{short:short.shortUrl});
-});
+
 
 
 
